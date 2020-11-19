@@ -37,7 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Zeats.Legacy.PlainTextTable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Zeats.Legacy.PlainTextTable.1.0.0.2\lib\net45\Zeats.Legacy.PlainTextTable.dll</HintPath>
+      <HintPath>..\packages\Zeats.Legacy.PlainTextTable.1.0.0.3\lib\net45\Zeats.Legacy.PlainTextTable.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
