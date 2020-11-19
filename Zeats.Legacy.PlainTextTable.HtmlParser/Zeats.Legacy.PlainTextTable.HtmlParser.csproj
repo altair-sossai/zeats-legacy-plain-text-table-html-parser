@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2CD32378-C47E-4CB3-9848-9BEDB0C0B4FC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Zeats.Legacy.PlainTextTable.HtmlParser</RootNamespace>
+    <AssemblyName>Zeats.Legacy.PlainTextTable.HtmlParser</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="HtmlAgilityPack, Version=1.11.28.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.28\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Zeats.Legacy.PlainTextTable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeats.Legacy.PlainTextTable.1.0.0.2\lib\net45\Zeats.Legacy.PlainTextTable.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cells\Basic\BasicCellDefinition.cs" />
+    <Compile Include="Cells\BrCellDefinition.cs" />
+    <Compile Include="Cells\HrCellDefinition.cs" />
+    <Compile Include="Cells\ParagraphCellDefinition.cs" />
+    <Compile Include="Cells\TableCellDefinition.cs" />
+    <Compile Include="Cells\TdCellDefinition.cs" />
+    <Compile Include="Cells\TrCellDefinition.cs" />
+    <Compile Include="Columns\Basic\BasicColumnDefinition.cs" />
+    <Compile Include="Columns\BrColumnDefinition.cs" />
+    <Compile Include="Columns\HrColumnDefinition.cs" />
+    <Compile Include="Columns\ParagraphColumnDefinition.cs" />
+    <Compile Include="Columns\TableColumnDefinition.cs" />
+    <Compile Include="Columns\TdColumnDefinition.cs" />
+    <Compile Include="Extensions\HtmlNodeExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renders\Basic\BasicGridRender.cs" />
+    <Compile Include="Renders\BrGridRender.cs" />
+    <Compile Include="Renders\HrGridRender.cs" />
+    <Compile Include="Renders\ParagraphGridRender.cs" />
+    <Compile Include="Renders\TableGridRender.cs" />
+    <Compile Include="Rows\Basic\BasicRowDefinition.cs" />
+    <Compile Include="Rows\BrRowDefinition.cs" />
+    <Compile Include="Rows\HrRowDefinition.cs" />
+    <Compile Include="Rows\ParagraphRowDefinition.cs" />
+    <Compile Include="Rows\TableRowDefinition.cs" />
+    <Compile Include="Rows\TdRowDefinition.cs" />
+    <Compile Include="Styles\StylesDictionary.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".nuspec" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
